@@ -1,0 +1,70 @@
+body{
+	padding-top: 100px;
+	text-align: center;
+	font-size: 15pt;
+	font-family: 'Phetsarath OT','Saysettha OT','not serif',arial,Verdana;
+}
+.controler_css{
+	display: inline-block;
+	box-shadow: 0px 10px 15px 1px rgba(0,0,0,0.6);
+	border-radius: 5px;
+	overflow: hidden;
+	counter-reset: flag;
+}
+.controler_css a{
+	display: block;
+	float: left;
+	text-decoration: none;
+	padding: 0px 25px 4px 60px;
+	line-height: 35px;
+	background: linear-gradient(#003a66,#002b4d);
+	color: #ffffff;
+	position: relative;
+}
+.controler_css a.active, .controler_css a:hover{
+	background: linear-gradient(#e06000,#cc5800);
+}
+.controler_css a.active:after, .controler_css a:hover:after{
+	background:linear-gradient(135deg,#e06000,#cc5800);
+}
+.controler_css a:after{
+	content:'';
+	width: 40px;
+	height: 40px;
+	box-shadow: 2px -2px 1px 1px rgba(0,0,0,0.5), 3px -2px 1px 1px rgba(255,255,255,0.6);
+	background:linear-gradient(135deg,#003a66,#002b4d);
+	position: absolute; 
+	top: 0px;
+	z-index: 1;
+	right: -18px;
+	-webkit-transform: scale(0.707) rotate(45deg);
+	-moz-transform: scale(0.707) rotate(45deg);
+	-o-transform: scale(0.707) rotate(45deg);
+	transform: scale(0.707) rotate(45deg);
+	border-radius: 0px 0px 0px 30px;
+}
+.controler_css a:last-child:after{
+	content: none;
+}
+.controler_css a:last-child{
+	padding-right: 25px;
+	border-radius: 0px 5px 5px 0px;
+}
+.controler_css a:before{
+	content: counter(flag);
+	counter-increment: flag;
+	width: 20px;
+	height: 20px;
+	background-color: #a6001a;
+	font-weight: bold;
+	position: absolute;
+	top: 0px;
+	left: 30px;
+	line-height: 20px;
+	margin: 8px 0px;
+	border-radius: 100%;
+}
+.controler_css a input{
+	border-radius: 30px 30px 30px 30px;
+	border-color: #ffffff;
+}
